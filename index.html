@@ -71,14 +71,19 @@
     .skill-card h3{font-size:1.15rem;margin-bottom:9px}
     .skill-card p{font-size:.9rem;color:var(--muted);min-height:76px}
     .skill-level{display:inline-block;margin-top:17px;color:var(--accent2);font-size:.78rem;font-weight:700}
-    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .project-card{padding:28px;transition:.25s;display:flex;flex-direction:column;min-height:280px}
-    .project-number{font:800 2rem Manrope;color:rgba(183,192,255,.45);margin-bottom:22px}
-    .project-card h3{font-size:1.2rem;margin-bottom:12px}
-    .project-card p{color:var(--muted);font-size:.92rem}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 13px}
-    .tags span{font-size:.72rem;padding:5px 10px;border-radius:999px;background:rgba(139,156,255,.12);color:#d2d8ff}
-    .project-status{font-size:.78rem;color:#9da9c4;margin-top:auto}
+    
+    /* PROJECTS SECTION STYLES */
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px}
+    .project-card{padding:32px;transition:.25s;display:flex;flex-direction:column}
+    .project-number{font:800 2rem Manrope;color:rgba(183,192,255,.45);margin-bottom:16px}
+    .project-icon{font-size:2.2rem;margin-bottom:16px}
+    .project-card h3{font-size:1.3rem;margin-bottom:12px;color:#fff}
+    .project-card p{color:var(--muted);font-size:.92px;line-height:1.7;margin-bottom:20px}
+    .project-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .project-tags span{font-size:.75rem;padding:5px 12px;border-radius:999px;background:rgba(139,156,255,.12);color:#d2d8ff}
+    .demo-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#0b1020;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.88rem;transition:.25s;margin-top:auto;width:fit-content}
+    .demo-btn:hover{background:#fff;transform:translateY(-2px)}
+
     .journey{background:linear-gradient(180deg,transparent,rgba(21,31,56,.35),transparent)}
     .journey-list{max-width:800px;display:grid;gap:15px}
     .journey-card{padding:23px 26px;display:grid;grid-template-columns:42px 1fr;gap:15px}
@@ -105,140 +110,18 @@
     .footer{border-top:1px solid var(--line);padding:28px 0;color:#8995af;font-size:.85rem}
     .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     .back-top{color:var(--accent2)}
-    @media(max-width:900px){.hero-grid{gap:35px}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){.hero-grid{gap:35px}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}}
     @media(max-width:700px){
       .container{width:min(100% - 32px,var(--max))}.nav{height:70px}.menu-toggle{display:block}
       .nav-links{display:none;position:absolute;top:70px;left:0;right:0;padding:20px 24px 25px;background:#0e1528;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}
       .nav-links.open{display:flex}.nav-links .nav-cta{text-align:center}
       .hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding:70px 0 85px;gap:48px}.hero-text{text-align:center}.hero-copy{margin:auto}.hero-actions{justify-content:center}
       .portrait-wrap{width:min(78%,330px)}.float-tag{right:-16px}
-      section{padding:78px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.skills-grid,.projects-grid{grid-template-columns:1fr 1fr}
+      section{padding:78px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}
       .section-head{text-align:center;margin-left:auto;margin-right:auto}.contact-intro{padding:0}
     }
-    @media(max-width:470px){.skills-grid,.projects-grid,.form-row{grid-template-columns:1fr}.skill-card p{min-height:0}.contact-form{padding:22px}.about-copy{padding:25px}}
+    @media(max-width:470px){.skills-grid,.form-row{grid-template-columns:1fr}.skill-card p{min-height:0}.contact-form{padding:22px}.about-copy{padding:25px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-    /* PROJECTS SECTION */
-
-.projects {
-    background: #0b1020;
-    padding: 100px 0;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-label {
-    color: #8b9cff;
-    font-size: 13px;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
-
-.section-heading h2 {
-    font-size: 38px;
-    color: #ffffff;
-    margin: 12px 0;
-}
-
-.section-heading p {
-    color: #a7b1c7;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 850px;
-    margin: auto;
-}
-
-.project-card {
-    background: linear-gradient(145deg, #151f38, #111a30);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    padding: 30px;
-    transition: 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #8b9cff;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-.project-number {
-    color: #8b9cff;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.project-icon {
-    font-size: 38px;
-    margin: 20px 0;
-}
-
-.project-card h3 {
-    color: #ffffff;
-    font-size: 23px;
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    color: #a7b1c7;
-    font-size: 14px;
-    line-height: 1.8;
-    min-height: 100px;
-}
-
-.project-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.project-tags span {
-    background: rgba(139,156,255,0.15);
-    color: #b7c0ff;
-    padding: 6px 13px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-.demo-btn {
-    display: inline-block;
-    background: #8b9cff;
-    color: #0b1020;
-    padding: 11px 22px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.demo-btn:hover {
-    background: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 650px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading h2 {
-        font-size: 29px;
-    }
-
-    .project-card {
-        padding: 25px;
-    }
-}
   </style>
 </head>
 <body>
@@ -271,10 +154,9 @@
         <div class="portrait-wrap">
           <div class="portrait-glow"></div>
           <div class="portrait">
-            <!-- Replace this placeholder with: <img src="images/profile.jpg" alt="Muskan"> -->
             <div class="portrait-placeholder">
               <div class="avatar">M</div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAcF57Bqp8agckepgWzFwV0xBxe2gDcbChteoaL41YzUUL62kxx3hvsU&s=10">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAcF57Bqp8agckepgWzFwV0xBxe2gDcbChteoaL41YzUUL62kxx3hvsU&s=10" alt="Muskan">
               <p>Add your portrait as <b>images/profile.jpg</b> to show it here.</p>
             </div>
           </div>
@@ -315,74 +197,47 @@
         </div>
       </div>
     </section>
-<!-- PROJECTS SECTION -->
-<section class="projects section-padding" id="projects">
-    <div class="container">
 
-        <div class="section-heading">
-            <p class="section-label">MY WORK</p>
-            <h2>My Mini Projects</h2>
-            <p>Here are some of my projects built using HTML, CSS and JavaScript.</p>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">MY WORK</p>
+          <h2>My Mini Projects</h2>
+          <p>Here are some of my projects built using HTML, CSS and JavaScript.</p>
         </div>
 
         <div class="projects-grid">
-
-            <!-- Calculator Project -->
-            <div class="project-card">
-                <div class="project-number">01</div>
-
-                <div class="project-icon">🧮</div>
-
-                <h3>Calculator</h3>
-
-                <p>
-                    A simple and interactive calculator designed
-                    to perform basic mathematical operations
-                    with a clean and user-friendly interface.
-                </p>
-
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="calculator.html" target="_blank" class="demo-btn">
-                    Live Demo ↗
-                </a>
+          <!-- Calculator Project -->
+          <div class="project-card glass-card">
+            <div class="project-number">01</div>
+            <div class="project-icon">🧮</div>
+            <h3>Calculator</h3>
+            <p>A simple and interactive calculator designed to perform basic mathematical operations with a clean and user-friendly interface.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
+            <a href="calculator.html" target="_blank" class="demo-btn">Live Demo ↗</a>
+          </div>
 
-
-            <!-- Digital Clock Project -->
-            <div class="project-card">
-                <div class="project-number">02</div>
-
-                <div class="project-icon">🕒</div>
-
-                <h3>Digital Clock</h3>
-
-                <p>
-                    A real-time digital clock that displays
-                    the current time and automatically updates
-                    every second using JavaScript.
-                </p>
-
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="digital-watch.html" target="_blank" class="demo-btn">
-                    Live Demo ↗
-                </a>
+          <!-- Digital Clock Project -->
+          <div class="project-card glass-card">
+            <div class="project-number">02</div>
+            <div class="project-icon">🕒</div>
+            <h3>Digital Clock</h3>
+            <p>A real-time digital clock that displays the current time and automatically updates every second using JavaScript.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
-
+            <a href="digital-watch.html" target="_blank" class="demo-btn">Live Demo ↗</a>
+          </div>
         </div>
-    </div>
-</section>
-    
-    
+      </div>
+    </section>
 
     <section id="contact">
       <div class="container">
